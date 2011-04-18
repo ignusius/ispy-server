@@ -1,0 +1,17 @@
+$def with(name,form) 
+
+<html><head>
+<title>WebIspy</title>
+$if name:
+    <h1>Ошибка 404</h1>
+
+$else:
+    <form name="main" method="post"
+    
+    $:form.render()
+    </form>
+    $for i in glob.glob("static/images/*.jpg"):
+        <a href="$i"><img class="size-medium wp-image-1078 aligncenter" src="$i" width="300" height="225"/>
+
+
+
