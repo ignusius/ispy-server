@@ -2,16 +2,20 @@ $def with(name,form)
 
 <html><head>
 <title>WebIspy</title>
+
 $if name:
     <h1>Ошибка 404</h1>
 
 $else:
-    <form name="main" method="post"
-    
-    $:form.render()
+    <p style="background-color:#ff9900" align="left">
+    <img src="static/logo.png">
+    <form  method="post">
+    <center>$:form.render_css()</center>
     </form>
+    <center>
     $for i in glob.glob("static/images/*.jpg"):
         <a href="$i"><img class="size-medium wp-image-1078 aligncenter" src="$i" width="300" height="225"/>
-
+    </center>
+    <center><p><a href="http://devhead.ru">Power by Devhead</a></p></center>
 
 
